@@ -1,17 +1,14 @@
-# container_com_textfield
+# Aplicativo: Gasolina x Álcool
 
-A new Flutter project.
+- Instituto Federal de Ciências e Tecnologia do Piauí - IFPI
+- Tecnólogo em Análise e Desenvolvimento de Sistemas - TADS
+- Prof.: Otilio Paulo (otilio.paulo@ifpi.edu.br)
+- Aluno: João Carlos Barbosa dos Santos - 20141ADS0313
+- Data: 05/10/2026
+- GitHub: https://github.com/jbarsan/ProgramacaoParaDispositivosMoveis/tree/main/container_com_textfield
+- Meu eBook: https://drive.google.com/file/d/1wKkrwqUUmSrB6yUNqd0nY-wkklCyrBMw/view?usp=sharing
 
-## Getting Started
+A atividade foi realizada seguindo as instruções do professor em sala de aula e complementada com pesquisas no Google, documentação do Flutter e com ajuda do Gemini.
 
-This project is a starting point for a Flutter application.
+Também foram seguidos os passos do eBook que está disponível no link acima.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

@@ -210,10 +210,10 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             // A expressão ?: é uma expressão condicional
-                            //Ela é usada para escolher um valor com base em uma condição
-                            //Se a condição _eficiencia! <= 70 for verdadeira,
+                            // Ela é usada para escolher um valor com base em uma condição
+                            // Se a condição _eficiencia! <= 70 for verdadeira,
                             // o valor retornado será Colors.green[700]
-                            //Caso contrário, o valor retornado será Colors.blue[800]
+                            // Caso contrário, o valor retornado será Colors.blue[800]
                             color: _eficiencia! <= 70
                                 ? Colors.green[700]
                                 : Colors.blue[800],
