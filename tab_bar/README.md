@@ -1,17 +1,18 @@
 # tab_bar
 
-A new Flutter project.
+* Programação para Dispositivos Móveis
+* Flutter – Container com TabBar
+* Prof. Otílio Paulo
+* Atividade do dia 15/10/2026
+* João Carlos B. Santos
 
-## Getting Started
+Atividade sobre Container com TabBar.
 
-This project is a starting point for a Flutter application.
+Aplicativo simples utilizando os conceitos já estudados em sala de aula
+para fixação do conteúdo abordado.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* AppBar - Cabeçalho da aplicação.
+* TabBar - Abas para navegação entre diferentes conteúdos.
+* BottomNavigationBar - Barra de navegação inferior.
+* TabBarView - Visão da aba selecionada.
+* FloatingActionButton - Botão flutuante para ações rápidas.
