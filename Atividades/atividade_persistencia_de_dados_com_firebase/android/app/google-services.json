@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "843076300608",
+    "project_id": "atividade-login-firebase-df97e",
+    "storage_bucket": "atividade-login-firebase-df97e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843076300608:android:dfa029e353c6328152d4a5",
+        "android_client_info": {
+          "package_name": "com.example.persistencia_de_dados"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJrGXTG7pBFD5c2SCntk9psMsaeOkgJ6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
