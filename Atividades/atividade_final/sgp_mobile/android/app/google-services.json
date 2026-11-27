@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363442296174",
+    "project_id": "sgp-mobile-f06fc",
+    "storage_bucket": "sgp-mobile-f06fc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363442296174:android:2fa1e83b1714b670521d7f",
+        "android_client_info": {
+          "package_name": "br.com.joaobarsan.sgp_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363442296174-mei0a629s6v815g9s31grt0f3jtfm41m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnHNRB_nDLpOFPvMdODt68oEoCe_oHNnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363442296174-mei0a629s6v815g9s31grt0f3jtfm41m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

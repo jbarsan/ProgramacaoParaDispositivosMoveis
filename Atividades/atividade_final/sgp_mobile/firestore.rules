@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Verifica se o usuário está autenticado no Firebase Auth.
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Obtém o documento de perfil do usuário autenticado.
+    function getProfile() {
+      return get(/databases/$(database)/documents/profiles/$(request.auth.uid)).data;
+    }
+
+    // Verifica se o usuário está aprovado e ativo no sistema.
+    function isAprovado() {
+      return isSignedIn() && getProfile().ativo == true && getProfile().role != 'pendente';
+    }
+
+    // Verifica se o usuário possui perfil de gestão (administrador ou coordenação).
+    function isGestor() {
+      return isAprovado() && (getProfile().role == 'administrador' || getProfile().role == 'coordenacao');
+    }
+
+    // Verifica se o e-mail autenticado é o do Administrador Master.
+    function isMasterAdminEmail() {
+      return isSignedIn() && request.auth.token.email == 'administrador@sgp.com.br';
+    }
+
+    // Coleção de Perfis de Usuários
+    match /profiles/{userId} {
+      // Usuário lê seu próprio perfil; Administrador e Coordenação leem todos
+      allow read: if isSignedIn() && (request.auth.uid == userId || isGestor());
+
+      // Admin Master cria seu perfil já ativo; usuários comuns criam apenas como pendente/inativo
+      allow create: if isSignedIn() && request.auth.uid == userId && (
+        (isMasterAdminEmail() && request.resource.data.role == 'administrador' && request.resource.data.ativo == true) ||
+        (request.resource.data.role == 'pendente' && request.resource.data.ativo == false)
+      );
+
+      // Gestores podem aprovar e editar role, ativo e lotacao;
+      // Usuário comum só edita seus dados pessoais (nome, fotoUrl, cargo, matricula)
+      allow update: if isGestor() || (
+        isSignedIn() && request.auth.uid == userId &&
+        !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'ativo', 'lotacao'])
+      );
+
+      // Somente administrador exclui coordenação/administrador; gestores excluem demais contas
+      allow delete: if isGestor() && request.auth.uid != userId && (
+        getProfile().role == 'administrador' ||
+        (resource.data.role != 'coordenacao' && resource.data.role != 'administrador')
+      );
+    }
+
+    // Coleção de Demandas e Subcoleções
+    match /demandas/{demandaId} {
+      allow read, write: if isAprovado();
+
+      match /comentarios/{comentarioId} {
+        allow read, create: if isAprovado();
+        allow update, delete: if isAprovado() && (resource.data.autorId == request.auth.uid || isGestor());
+      }
+
+      match /historico/{historicoId} {
+        allow read, create: if isAprovado();
+        allow update, delete: if false; // Linha do tempo imutável
+      }
+    }
+
+    // Coleção de Viagens
+    match /viagens/{viagemId} {
+      allow read, write: if isAprovado();
+    }
+
+    // Coleção de Notificações In-App
+    match /notificacoes/{notificacaoId} {
+      allow read, create, update: if isAprovado();
+    }
+  }
+}

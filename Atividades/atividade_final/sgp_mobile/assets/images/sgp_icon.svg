@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="mppiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8E1919" />
+      <stop offset="100%" stop-color="#6B1212" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.75" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo institucional MPPI com cantos arredondados para ícones legados -->
+  <rect x="32" y="32" width="960" height="960" rx="210" fill="url(#mppiGrad)" />
+
+  <!-- Moldura interna sutil -->
+  <rect x="76" y="76" width="872" height="872" rx="172" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="12" />
+
+  <!-- Faixa inferior escura sutil (#121212) para contraste institucional -->
+  <path d="M 76 740 L 948 740 L 948 776 C 948 871 871 948 776 948 L 248 948 C 153 948 76 871 76 776 Z" fill="#121212" fill-opacity="0.28" />
+
+  <!-- Iniciais SGP -->
+  <text x="512" y="545"
+        text-anchor="middle"
+        font-family="DejaVu Sans, Liberation Sans, Noto Sans, Arial, sans-serif"
+        font-size="310"
+        font-weight="900"
+        letter-spacing="10"
+        fill="#FFFFFF">SGP</text>
+
+  <!-- Linha divisória branca -->
+  <rect x="252" y="612" width="520" height="16" rx="8" fill="url(#accentGrad)" />
+
+  <!-- Subtítulo institucional -->
+  <text x="512" y="705"
+        text-anchor="middle"
+        font-family="DejaVu Sans, Liberation Sans, Noto Sans, Arial, sans-serif"
+        font-size="64"
+        font-weight="700"
+        letter-spacing="16"
+        fill="#FFFFFF"
+        fill-opacity="0.92">CPPT • MPPI</text>
+</svg>
